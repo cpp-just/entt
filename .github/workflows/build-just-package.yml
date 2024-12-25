@@ -25,8 +25,9 @@ jobs:
       
     - name: Pull latest changes from tinygltf repository
       run: |
-        git remote add tinygltf https://github.com/syoyo/tinygltf
-        git pull tinygltf release --rebasebazel-release-archive.yml
+        git remote add entt https://github.com/skypjack/entt
+        git pull entt master --rebase
+        rm -f bazel-release-archive.yml
         rm -f bazel.yml
         rm -f build.yml
         rm -f coverage.yml
